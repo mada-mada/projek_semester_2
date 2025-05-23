@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+html {
+  background-color: #FBFBFB;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+}
+
+.login-box {
+  width: 45vh;
+  padding: 30px;
+  background-color: #FBFBFB;
+  border-radius: 9px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: 100px auto;
+  text-align: center;
+  height: 50vh;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  height: 50px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+/* .login-box & styling umum omitted for brevity */
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-wrapper input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .password-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 6px;
+    color: #3498db;
+    display: none;  /* tersembunyi secara default */
+  }
+  
+  /* Tampilkan tombol jika salah satu elemen di dalam .password-wrapper sedang difokuskan */
+  .password-wrapper:focus-within button {
+    display: inline-block;
+  }
+
+.tombol{
+  width: 95%;
+  padding: 12px;
+  background: #3498db;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 40px;
+}

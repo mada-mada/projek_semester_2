@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+html{
+     background-color: #FBFBFB; 
+     height: 100%;
+}
+body {
+    background-color: transparent;
+    margin: 0;
+}
+nav {
+    background-color: #e0e0e0; /* Pastikan ada background */
+    border-bottom: 2px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.nav-right {
+    padding-right: 40px;
+}
+.card {
+    border: 1px solid #FBFBFB;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek hover untuk interaktivitas */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.card img {
+     aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card-img-terkini{        /* Biar gambar menyesuaikan lebar card */
+        height: auto;         /* Tinggi otomatis biar rasio gambar terjaga */
+        max-width: 300px;     /* Batas maksimum lebar gambar */
+        object-fit: contain;  /* Biar gambar nggak terpotong */
+        border-radius: 10px;  /* Opsional: kasih sudut melengkung */
+        aspect-ratio: 16/9;
+
+}
+.poppins{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: bold;
+}
+.rubik-headline{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+
+}
+.rubik-title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600; 
+
+}
+.rubik-artikel{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400; 
+    line-height: 1.6; 
+
+}
+a {
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+footer {
+    position: static;
+    bottom: 0;
+}
+
+.footer {
+    background-color: #FBFBFB;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+    border-top: 2px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.footer .footer-left {
+    width: 30%;
+}
+
+.footer h3 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.footer .footer-left img {
+    width: 25%;
+    vertical-align: middle;
+}
+
+.footer .footer-left .logo {
+    width: 100%;
+}
+
+.footer .text-kiri {
+    font-size: 14px;
+    margin: 0;
+    padding-top: 10%;
+}
+
+.footer .footer-center {
+    width: 35%;
+    text-align: center;
+}
+
+.footer .footer-center div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer .footer-center i {
+    color: black;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px; /* Jarak antara ikon dan teks */
+}
+
+.footer .footer-center p {
+    display: block;
+    font-size: 14px;
+}
+
+.footer .footer-right {
+    width: 30%;
+    text-align: right;
+}
+
+.footer .footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer .footer-right p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.badge {
+    padding: 0.5em 0.75em;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+/* Tambahan class berdasarkan nama organisasi (huruf kecil dan strip) */
+.org-mpm {
+    background-color: #ffc107; /* kuning - mirip bootstrap warning */
+}
+.org-bem {
+    background-color: #ffc107;
+}
+.org-hmm {
+    background-color: #ffc107;
+}
+.org-himakes {
+    background-color: #ffc107;
+}
+.org-himarpl {
+    background-color: #ffc107;
+}
+.org-himra {
+    background-color: #ffc107;
+}
+.org-himasikc {
+    background-color: #ffc107;
+}
+.org-himatrik {
+    background-color: #ffc107;
+}
+.org-himatif {
+    background-color: #ffc107;
+}
+.org-majap {
+    background-color: #198754; /* hijau - mirip bootstrap success */
+}
+.org-gamaci {
+    background-color: #198754;
+}
+.org-himaka-indramayu {
+    background-color: #198754;
+}
+.org-kemuning {
+    background-color: #198754;
+}
+.org-pmpt-indramayu {
+    background-color: #198754;
+}
+.org-robotika {
+    background-color: #dc3545; /* merah - mirip bootstrap danger */
+}
+.org-kompa {
+    background-color: #dc3545;
+}
+.org-popi {
+    background-color: #dc3545;
+}
+.org-kopen {
+    background-color: #dc3545;
+}
+.org-ksrpmi {
+    background-color: #dc3545;
+}
+.org-folafo {
+    background-color: #dc3545;
+}
+.org-sebura {
+    background-color: #dc3545;
+}
+.org-immas {
+    background-color: #dc3545;
+}
+.org-polindra {
+    background-color: #0d6efd; /* biru - mirip bootstrap primary */
+}
+.org-duta-polindra {
+    background-color: #0d6efd;
+}
+.org-formadiksi {
+    background-color: #0d6efd;
+}
+
