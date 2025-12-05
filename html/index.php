@@ -91,20 +91,25 @@ $sql2 = mysqli_query($connection, $query2);
         <!-- Artikel Section -->
         <div class="row">
             <?php foreach ($articles as $result): ?>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="../folder-foto/<?= $result['image']; ?>" class="card-img" alt="Berita 1">
-                        <div class="card-body">
-                            <h5 class="rubik-title"><?php echo $result['title'] ?></h5>
-                            <span class="badge 
-                     <?php echo 'org-' . strtolower(str_replace(' ', '-', $result['org_name'])); ?>">
-                                <?php echo $result['org_name']; ?>
-                            </span>
-                            <p class="rubik-artikel"><?= limit_words($result['content'], 30); ?></p>
-                            <a href="detail_article.php?detail=<?= $result['article_id']; ?>" class="btn btn-primary rubik-artikel">Baca selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
+         <div class="col-md-4 d-flex">
+            <div class="card h-100">
+           <img src="../folder-foto/<?= $result['image']; ?>" class="card-img" alt="Berita 1">
+               <div class="card-body d-flex flex-column">
+                 <h5 class="rubik-title"><?= limit_words($result['title'], 30);?></h5>
+
+                   <span class="badge <?php echo 'org-' . strtolower(str_replace(' ', '-', $result['org_name'])); ?>" >
+              <?php echo $result['org_name']; ?>
+        </span>
+        <p class="rubik-artikel flex-grow-1 mt-2">
+            <?= limit_words($result['content'], 30); ?>
+        </p>
+
+        <a href="detail_article.php?detail=<?= $result['article_id']; ?>" 
+           class="btn btn-primary mt-auto rubik-artikel">Baca selengkapnya</a>
+    </div>
+  </div>
+</div>
+
             <?php endforeach; ?>
         </div>
     </div>
@@ -112,9 +117,9 @@ $sql2 = mysqli_query($connection, $query2);
         <div class="row">
             <!-- Kolom kiri untuk teks -->
             <div class="col-lg-4">
-                <h6 class="text-primary rubik-title">our recent article</h6>
+                <h6 class="text-primary rubik-title">Artikel terbaru dari kami</h6>
                 <h2 class="rubik-headline"> nikmati berbagai artikel terbaru</h2>
-                <p class="rubik-artikel">Stay Ahead of the Curve and Dive Deep into the Must-Read Trending Articles that Keep You Informed and Inspired.</p>
+                <p class="rubik-artikel">Ikuti terus berita terbaru</p>
             </div>
 
             <!-- Kolom kanan untuk artikel -->
@@ -152,11 +157,11 @@ $sql2 = mysqli_query($connection, $query2);
             <div class="row">
                 <!-- Footer Left -->
                 <div class="col-lg-4 footer-left">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>Artify</h3>
                     <div class="logo">
-                        <img src="/img/png-clipart-bandung-state-polytechnic-indramayu-state-polytechnic-politeknik-negeri-pontianak-technical-school-penelusuran-minat-dan-kemampuan-politeknik-negeri-telp-logo-engineering-removebg-preview.png" alt="" class="polindra">
+                        <img src="/img/Yorushika_Logo-removebg-preview.png" alt="" class="polindra">
                     </div>
-                    <p class="text-kiri">Lorem ipsum dolor sit amet.</p>
+                    <p class="text-kiri">Terus update dengan berita terbaru dari kami</p>
                 </div>
 
                 <!-- Footer Center -->
@@ -166,7 +171,10 @@ $sql2 = mysqli_query($connection, $query2);
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M11.5 9A2.5 2.5 0 0 1 14 6.5c1.1 0 2.03.71 2.37 1.69c.08.26.13.53.13.81a2.5 2.5 0 0 1-2.5 2.5c-1.09 0-2-.69-2.36-1.66c-.09-.26-.14-.55-.14-.84M5 9c0 4.5 5.08 10.66 6 11.81L10 22S3 14.25 3 9c0-3.17 2.11-5.85 5-6.71C6.16 3.94 5 6.33 5 9m9-7c3.86 0 7 3.13 7 7c0 5.25-7 13-7 13S7 14.25 7 9c0-3.87 3.14-7 7-7m0 2c-2.76 0-5 2.24-5 5c0 1 0 3 5 9.71C19 12 19 10 19 9c0-2.76-2.24-5-5-5" />
                             </svg>
-                            <p class="mb-0"><span>Lorem ipsum dolor sit amet.</span></p>
+                           <p class="mb-0">
+                                   <a href="https://maps.app.goo.gl/cE4KmsXBEd4RHUuZ7" target="_blank" style="text-decoration: none; color: inherit;">Kunjungi kami </a>
+                            </p>
+
                         </div>
                         <div class="d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -179,15 +187,15 @@ $sql2 = mysqli_query($connection, $query2);
                                     </path>
                                 </g>
                             </svg>
-                            <p class="mb-0">testing@gmail.com</p>
+                            <p class="mb-0">Artify@gmail.com</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Footer Right -->
                 <div class="col-lg-4 footer-right">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
+                    <h3>Tentang kami</h3>
+                    <p>Website ini menyediakan informasi organisasi kampus secara terpusat dan terstruktur</p>
                 </div>
             </div>
         </div>

@@ -41,6 +41,12 @@ nav {
         aspect-ratio: 16/9;
 
 }
+.card-body .badge {
+  align-self: flex-start;  /* biar gak melebar */
+  display: inline-block;   /* ukuran sesuai teks */
+  width: auto;             /* jangan ikut lebar flex parent */
+}
+
 .poppins{
     font-family: "Poppins", serif;
     font-weight: 700;
@@ -60,6 +66,7 @@ nav {
     font-family: 'Rubik', sans-serif;
     font-weight: 400; 
     line-height: 1.6; 
+    
 
 }
 a {
@@ -204,13 +211,13 @@ footer {
 .org-gamaci {
     background-color: #198754;
 }
-.org-himaka-indramayu {
+.org-himaka_indramayu {
     background-color: #198754;
 }
 .org-kemuning {
     background-color: #198754;
 }
-.org-pmpt-indramayu {
+.org-pmpt_indramayu {
     background-color: #198754;
 }
 .org-robotika {
@@ -240,7 +247,7 @@ footer {
 .org-polindra {
     background-color: #0d6efd; /* biru - mirip bootstrap primary */
 }
-.org-duta-polindra {
+.org-duta_polindra {
     background-color: #0d6efd;
 }
 .org-formadiksi {

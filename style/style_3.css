@@ -42,16 +42,27 @@ a:hover {
     color: #007bff;
     transform: translateY(-2px);
 }
- .image{
-    width: 600px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.image {
+    width: 100%;
+    max-width: 800px;  
     aspect-ratio: 16/9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
- }
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    object-fit: cover;       /* biar tetap proporsional */
+    object-position:  top center; /* crop fokus di tengah */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
  h2{
     padding-bottom: 30px;
     text-align: center;
